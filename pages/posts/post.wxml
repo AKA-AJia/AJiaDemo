@@ -1,0 +1,13 @@
+<view>
+  <swiper indicator-dots="true" interval="3000" autoplay="true">
+    <swiper-item>
+      <image src="/images/haizeiwang.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/huoying.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/ganglian.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
