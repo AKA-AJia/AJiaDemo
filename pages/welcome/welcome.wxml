@@ -1,0 +1,8 @@
+<view class="container">
+    <image class="user-avatar"  src="/images/user_img.jpg"></image>
+    <text class="user-name">Hello World</text>
+
+    <view class="moto-container">
+        <text class="moto-login">开启小程序</text>
+    </view>
+</view>
