@@ -2,7 +2,7 @@
     <image class="user-avatar"  src="/images/user_img.jpg"></image>
     <text class="user-name">Hello World</text>
 
-    <view class="moto-container">
+    <view class="moto-container" bindtap="onTap">
         <text class="moto-login">开启小程序</text>
     </view>
 </view>
