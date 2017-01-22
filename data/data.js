@@ -1,5 +1,5 @@
 var local_database = [
-        {
+    {
         title: "进击的巨人",
         content: "《进击的巨人》（进撃の巨人），是日本漫画家谏山创创作的少年漫画作品，于2009年在讲谈社旗下的漫画杂志《别册少年Magazine》上开始连载。",
         imgSrc: "/images/postsImg/juren.jpg",
@@ -36,3 +36,7 @@ var local_database = [
         avatar: "/images/postsImg/post_icon.jpg",
     }
 ]
+
+module.exports = {
+    postsList: local_database
+}
