@@ -12,4 +12,18 @@ Page({
     });
   },
 
+  onPostTap:function(){
+    wx.navigateTo({
+      url: 'post-detail/post-detail',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+  }
 })
