@@ -1,1 +1,19 @@
-<text>这是文章详情页</text>
+<view class="detail-container">
+  <image class="detail-image" src="{{postDetailData.imgSrc}}"></image>
+  <image class="music-image" src="/images/postDetail/music-start.png"></image>
+  <view class="detail-author-container">
+    <image class="detail-author-image" src="/images/postsImg/post_icon.jpg"></image>
+    <text class="author-name">{{postDetailData.author}}</text>
+    <text class="author-public">发表于</text>
+    <text class="author-date">{{postDetailData.date}}</text>
+  </view>
+  <text class="detail-title">{{postDetailData.title}}</text>
+  <view class="detail-tool">
+    <view class="detail-share-collect">
+      <image src="/images/postDetail/collection.png"></image>
+      <image class="share-image" src="/images/postDetail/share.png"></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail-text">{{postDetailData.detail}}</text>
+</view>

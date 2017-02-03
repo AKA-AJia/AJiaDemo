@@ -10,6 +10,7 @@ var local_database = [
         author: "谏山创",
         date: "Jan 23 2017",
         avatar: "/images/postsImg/post_icon.jpg",
+        postId:0
     },
     {
         title: "一拳超人",
@@ -22,6 +23,7 @@ var local_database = [
         author: "村田雄介",
         date: "May 16 2015",
         avatar: "/images/postsImg/post_icon.jpg",
+        postId:1
     },
     {
         title: "东京喰种",
@@ -34,6 +36,7 @@ var local_database = [
         author: "石田スイ",
         date: "Nov 20 2016",
         avatar: "/images/postsImg/post_icon.jpg",
+        postId:2
     }
 ]
 
