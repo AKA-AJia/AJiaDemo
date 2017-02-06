@@ -10,8 +10,9 @@
   <text class="detail-title">{{postDetailData.title}}</text>
   <view class="detail-tool">
     <view class="detail-share-collect">
-      <image src="/images/postDetail/collection.png"></image>
-      <image class="share-image" src="/images/postDetail/share.png"></image>
+      <image wx:if="{{iscollected}}" catchtap="onCollectTap" src="/images/postDetail/collection.png"></image>
+      <image wx:else catchtap="onCollectTap" src="/images/postDetail/collection-anti.png"></image>
+      <image catchtap="onShareTap" class="share-image" src="/images/postDetail/share.png"></image>
     </view>
     <view class="horizon"></view>
   </view>
