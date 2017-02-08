@@ -10,7 +10,12 @@ var local_database = [
         author: "谏山创",
         date: "Jan 23 2017",
         avatar: "/images/postsImg/post_icon.jpg",
-        postId:0
+        postId:0,
+        music: {
+            url: "http://183.61.26.53/m10.music.126.net/20170208163003/cbaf06d75445aff081013a5a348c4478/ymusic/cb18/d830/0555/7d589c6ece00287324f44fe2bf1a01d7.mp3?wshc_tag=0&amp;wsts_tag=589ad183&amp;wsid_tag=da11e652&amp;wsiphost=ipdbm",
+            title: "counter・attack-m’aenkaind",
+            coverImg: "http://p3.music.126.net/SDehjex7vXOlMokmWePyhw==/2292481743979961.jpg?param=130y130"
+        }
     },
     {
         title: "一拳超人",
@@ -23,7 +28,12 @@ var local_database = [
         author: "村田雄介",
         date: "May 16 2015",
         avatar: "/images/postsImg/post_icon.jpg",
-        postId:1
+        postId:1,
+        music: {
+            url: "http://183.57.28.253/m10.music.126.net/20170208193002/d56e79578d85b0913b7c0420401fafb9/ymusic/08e5/511d/6f34/8e62daf140fc1c3454da5a094f212f9c.mp3?wshc_tag=0&amp;wsts_tag=589afb5e&amp;wsid_tag=da11e652&amp;wsiphost=ipdbm",
+            title: "A Theme of ONE PUNCH MAN正義執行",
+            coverImg: "http://p4.music.126.net/03pcOtiYji76c55s64mbzw==/6639950721829070.jpg?param=130y130"
+        }
     },
     {
         title: "东京喰种",
@@ -36,7 +46,12 @@ var local_database = [
         author: "石田スイ",
         date: "Nov 20 2016",
         avatar: "/images/postsImg/post_icon.jpg",
-        postId:2
+        postId:2,
+        music: {
+            url: "http://117.27.243.98/m10.music.126.net/20170208174850/3022b971eaebef633bb7bf67948abfd2/ymusic/6e5b/d811/baeb/e26545b6a77ae0f545a104f04e8782ef.mp3?wshc_tag=0&amp;wsts_tag=589ae3a6&amp;wsid_tag=da11e652&amp;wsiphost=ipdbm",
+            title: "unravel（TV edit",
+            coverImg: "http://p4.music.126.net/b7qLhmnKwqJTZk6X_KRttQ==/7771348185590326.jpg?param=200y200"
+        }
     }
 ]
 
