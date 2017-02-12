@@ -1,0 +1,43 @@
+@import "../movieGrid-template/movieGrid-template.wxss";
+
+.movie-list-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.inner-container{
+    margin: 0 auto 30rpx;
+}
+
+.movie-list-head {
+  padding: 20rpx 20rpx 22rpx;
+}
+
+.movie-list-more {
+  float: right;
+}
+
+.movie-list-grid {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.show-text {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+
+.more-text {
+  vertical-align: middle;
+  margin-right: 10rpx;
+  color: #1f4ba5;
+}
+
+.more-arrow {
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}

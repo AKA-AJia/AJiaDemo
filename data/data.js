@@ -49,8 +49,62 @@ var local_database = [
         postId:2,
         music: {
             url: "http://117.27.243.98/m10.music.126.net/20170208174850/3022b971eaebef633bb7bf67948abfd2/ymusic/6e5b/d811/baeb/e26545b6a77ae0f545a104f04e8782ef.mp3?wshc_tag=0&amp;wsts_tag=589ae3a6&amp;wsid_tag=da11e652&amp;wsiphost=ipdbm",
-            title: "unravel（TV edit",
+            title: "unravel（TV edit)",
             coverImg: "http://p4.music.126.net/b7qLhmnKwqJTZk6X_KRttQ==/7771348185590326.jpg?param=200y200"
+        }
+    },
+    {
+        title: "海贼王",
+        content: "《ONE PIECE》（航海王）简称“OP”，是日本漫画家尾田荣一郎作画的少年漫画作品。在《周刊少年Jump》1997年34号开始连载。改编的电视动画《航海王》于1999年10月20日起在富士电视台首播。截至2015年6月15日，《ONE PIECE》以日本本土累计发行了3亿2086万6000本，被吉尼斯世界纪录官方认证为“世界上发行量最高的单一作者创作的系列漫画”。",
+        imgSrc: "/images/postsImg/haizeiwang.jpg",
+        reading: 78,
+        detail: "拥有财富、名声、权力，这世界上的一切的男人 “海贼王”哥尔·D·罗杰，在被行刑受死之前说了一句话，让全世界的人都涌向了大海。“想要我的宝藏吗？如果想要的话，那就到海上去找吧，我全部都放在那里。”，世界开始迎接“大海贼时代”的来临。时值“大海贼时代”，为了寻找传说中海贼王罗杰所留下的大秘宝“ONE PIECE”，无数海贼扬起旗帜，互相争斗。一个叫路飞的少年为了与因救他而断臂的香克斯的约定而出海，在旅途中不断寻找志同道合的伙伴，开始了以成为海贼王为目标的伟大冒险旅程。",
+        collection: 109,
+        dateTime: "6小时前",
+        author: "尾田荣一郎",
+        date: "Nov 20 2016",
+        avatar: "/images/postsImg/post_icon.jpg",
+        postId:3,
+        music: {
+            url: "http://221.235.187.17/m10.music.126.net/20170212182546/68489491fa31100bf18be5464c6cde2b/ymusic/bacd/e251/e4a0/d027c623cee5f731ea7e85d25567af1d.mp3?wshc_tag=0&wsts_tag=58a0324e&wsid_tag=da12aa2b&wsiphost=ipdbm",
+            title: "HANDS UP!",
+            coverImg: "http://p4.music.126.net/v0VWOzk-SdU467fjqxiUrQ==/5803222371484856.jpg?param=130y130"
+        }
+    },
+    {
+        title: "火影忍者",
+        content: "《火影忍者》是日本漫画家岸本齐史的代表作，作品于1999年开始在《周刊少年JUMP》上连载，于2014年11月10日发售的JUMP第50号完结；后日谈性质的外传漫画《火影忍者外传：第七代火影与绯色花月》则于同杂志2015年第22、23合并号开始短期连载，至同年第32号完结。故事成功地将原本隐藏在黑暗中，用世界上最强大的毅力和最艰辛的努力去做最密不可宣和隐讳残酷的事情的忍者，描绘成了太阳下最值得骄傲最光明无限的职业。在岸本齐史笔下的忍者世界中，每一位年轻的忍者都在开拓着属于自己的忍道。",
+        imgSrc: "/images/postsImg/huoying.jpg",
+        reading: 56,
+        detail: "作品设定在一个忍者的世界，故事从主人公漩涡鸣人的孤儿生活开始，他的父母为了保护村子，将攻击村子九尾妖狐封印到了他体内，鸣人因此受尽了村人的冷落，只是拼命用各种恶作剧试图吸引大家的注意力。好在还是有依鲁卡老师的关心，鸣人的性格才没有变得扭曲，他总是干劲十足、非常乐观。为了让更多的人认可自己，鸣人的目标是成为火影。整个故事就围绕鸣人的奋斗、成长，鸣人的同伴们的故事，以及这个忍者世界的各种争斗和阴谋展开。",
+        collection: 59,
+        dateTime: "8小时前",
+        author: "岸本齐史",
+        date: "Nov 20 2016",
+        avatar: "/images/postsImg/post_icon.jpg",
+        postId:4,
+        music: {
+            url: "http://221.235.187.17/m10.music.126.net/20170210160423/dc18e6ececbdf5e29c566f1d64202ef0/ymusic/613b/769b/4546/9929f729f9394abec360c045dbf295ff.mp3?wshc_tag=0&amp;wsts_tag=589d6e2c&amp;wsid_tag=7157b55d&amp;wsiphost=ipdbm",
+            title: "Sign",
+            coverImg: "http://p3.music.126.net/r4Di2iu77z0Ss8EijzCaUw==/6626756581462901.jpg?param=200y200"
+        }
+    },
+    {
+        title: "钢之炼金术师",
+        content: "《钢之炼金术师》是根据日本漫画家荒川弘创作的漫画作品改编的同名电视动画。电视动画由BONES制作，于2003年7月发布制作动画版的消息，2003年10月4日开始在MBS/TBS系电视台播放，至2004年10月2日完结，全51话。相关剧场版动画《钢之炼金术师：香巴拉的征服者》于2005年7月23日在日本上映。电视动画和剧场版动画分别获选为2004年第八回和2005年第九回日本文化厅媒体艺术祭动画部门推荐的作品。",
+        imgSrc: "/images/postsImg/ganglian.jpg",
+        reading: 121,
+        detail: "故事发生在一个炼金术相当发达的世界，在这个世界的“炼金术”，是以理解物质的内在的法则：理解，分解，再构造成立，进行炼金术必须按照“等价交换”法则：为了获得某种东西，需要以同等的代价交换，代价不够的话便需要以自己的任何部份（身体的一部分、记忆等等）被作为代价的填补而被拿走。爱德华·艾尔利克和他弟弟阿尔冯斯·艾尔利克十分思念在他们还小的时候亡故的母亲，为了再次见到母亲，进行了炼金术中最大的禁忌——人体炼成。可是因为炼成时的反噬，阿尔则失去了全身，爱德失去了左脚，为了换回弟弟，爱德华牺牲自己的右手作为代价将弟弟的灵魂炼成，并将弟弟阿尔冯斯的灵魂固定在一副铠甲上。从此爱德华和阿尔冯斯为了取回他们所失去的一切，开始踏上了找回自己身体的旅程。爱德华失去的右臂和左腿由钢制义肢“机械铠”来替代，因此被授予“钢”的称号，故被称为“钢之炼金术师”。",
+        collection: 39,
+        dateTime: "12小时前",
+        author: "荒川弘",
+        date: "May 20 2014",
+        avatar: "/images/postsImg/post_icon.jpg",
+        postId:5,
+        music: {
+            url: "http://183.61.26.48/m10.music.126.net/20170212182428/b721fc122bea4c12cd480f7bc1cb0165/ymusic/4481/4120/a994/9481a18696d08a37bc647ed9d9440258.mp3?wshc_tag=0&wsts_tag=58a03201&wsid_tag=da12aa2b&wsiphost=ipdbm",
+            title: "レイン (TV size)",
+            coverImg: "http://p3.music.126.net/JQz3ShtLIKIu4K1_SUyswQ==/877410278965587.jpg?param=130y130"
         }
     }
 ]

@@ -1,14 +1,14 @@
 <import src="post-item/post-item-template.wxml" />
 <view>
-  <swiper indicator-dots="true" interval="3000" autoplay="true">
+  <swiper catchtap="onSwiperTap" indicator-dots="true" interval="3000" autoplay="true">
     <swiper-item>
-      <image src="/images/postsImg/haizeiwang.jpg"></image>
+      <image data-postId="3" src="/images/postsImg/haizeiwang.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/postsImg/huoying.jpg"></image>
+      <image data-postId="4" src="/images/postsImg/huoying.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/postsImg/ganglian.jpg"></image>
+      <image data-postId="5" src="/images/postsImg/ganglian.jpg"></image>
     </swiper-item>
   </swiper>
   <block wx:for="{{post_key}}" wx:for-item="item" wx:for-index="idx">

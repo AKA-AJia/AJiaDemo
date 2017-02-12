@@ -1,0 +1,12 @@
+<import src="movieList-template/movieList-template.wxml" />
+<view class="container">
+  <view class="movie-list-item">
+    <template is="movielistTemplate" data="{{movies}}"/>
+  </view>
+  <view class="movie-list-item">
+    <template is="movielistTemplate" data="{{movies}}"/>
+  </view>
+  <view class="movie-list-item">
+    <template is="movielistTemplate" data="{{movies}}"/>
+  </view>
+</view>
