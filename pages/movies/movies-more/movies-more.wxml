@@ -1,0 +1,2 @@
+<import src="../movie-gridview/gridview-template.wxml" />
+<template is="movieGridView" data="{{movies}}" />

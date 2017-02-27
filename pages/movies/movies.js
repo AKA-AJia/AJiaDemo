@@ -36,6 +36,13 @@ Page({
     })
   },
 
+  onMoreTap:function(event){
+    var category = event.currentTarget.dataset.category;
+    wx.navigateTo({
+      url:"movies-more/movies-more?category=" + category
+    })   
+  },
+
   processMoviesData(moviesData, typeKey, categoryTitle) {
     var movies = [];
     for (var idx in moviesData.subjects) {
@@ -56,7 +63,7 @@ Page({
       movies.push(temp);
     }
 
-    console.log(movies);
+    // console.log(movies);
     var readyData = {};
     readyData[typeKey] = {
       categoryTitle: categoryTitle,

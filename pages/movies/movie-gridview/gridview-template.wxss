@@ -1,0 +1,10 @@
+@import "../movieGrid-template/movieGrid-template.wxss";
+
+.gridview-item-container{
+    float: left;
+    margin-bottom: 40rpx;
+}
+
+.movie-gridview-container{
+    margin: 40rpx 0 40rpx 10rpx;
+}

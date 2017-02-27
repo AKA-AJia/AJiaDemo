@@ -4,14 +4,14 @@
     <view class="inner-container">
       <view class="movie-list-head">
         <text class="show-text">{{categoryTitle}}</text>
-        <view class="movie-list-more">
+        <view catchtap="onMoreTap" class="movie-list-more" data-category="{{categoryTitle}}">
           <text class="more-text">更多</text>
           <image class="more-arrow" src="/images/movie/arrow-right.png"></image>
         </view>
         <view class="movie-list-grid">
-        <block wx:for="{{movies}}" wx:for-item="movie">
-          <template is="movieGridTemplate" data="{{...movie}}"/>
-        </block>
+          <block wx:for="{{movies}}" wx:for-item="movie">
+            <template is="movieGridTemplate" data="{{...movie}}" />
+          </block>
         </view>
       </view>
     </view>
