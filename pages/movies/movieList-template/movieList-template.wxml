@@ -3,7 +3,7 @@
   <view class="movie-list-container">
     <view class="inner-container">
       <view class="movie-list-head">
-        <text class="show-text">即将上映</text>
+        <text class="show-text">{{categoryTitle}}</text>
         <view class="movie-list-more">
           <text class="more-text">更多</text>
           <image class="more-arrow" src="/images/movie/arrow-right.png"></image>

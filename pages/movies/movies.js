@@ -1,6 +1,11 @@
 var app = getApp();
+var util = require("../../utils/util.js")
 Page({
-  data: {},
+  data: {
+    inTheaters: {},
+    comingSoon: {},
+    top250: {}
+  },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     var baseUrl = app.globalData.doubanBase;
@@ -8,12 +13,12 @@ Page({
     var comingSoon = baseUrl + "/v2/movie/coming_soon" + "?start=0&count=3";
     var top250 = baseUrl + "/v2/movie/top250" + "?start=0&count=3";
     //请求网络数据
-    this.getMovieData(inTheaters);
-    // this.getMovieData(comingSoon);
-    // this.getMovieData(top250);
+    this.getMovieData(inTheaters, "inTheaters", "正在热映");
+    this.getMovieData(comingSoon, "comingSoon", "即将上映");
+    this.getMovieData(top250, "top250", "豆瓣Top250");
   },
 
-  getMovieData(url) {
+  getMovieData(url, typeKey, categoryTitle) {
     var that = this;
     wx.request({
       url: url,
@@ -23,7 +28,7 @@ Page({
       },
       success: function (res) {
         // success
-        that.processMoviesData(res.data);
+        that.processMoviesData(res.data, typeKey, categoryTitle);
       },
       fail: function () {
         // fail
@@ -31,7 +36,7 @@ Page({
     })
   },
 
-  processMoviesData(moviesData) {
+  processMoviesData(moviesData, typeKey, categoryTitle) {
     var movies = [];
     for (var idx in moviesData.subjects) {
       var subject = moviesData.subjects[idx];
@@ -44,16 +49,19 @@ Page({
         title: title,
         average: subject.rating.average,
         coverageUrl: subject.images.large,
-        movieId: subject.id
+        movieId: subject.id,
+        stars: util.convertToStarsArray(subject.rating.stars)
       }
 
       movies.push(temp);
     }
 
     console.log(movies);
-
-    this.setData({
+    var readyData = {};
+    readyData[typeKey] = {
+      categoryTitle: categoryTitle,
       movies: movies
-    })
+    };
+    this.setData(readyData);
   }
 })
