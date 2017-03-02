@@ -25,12 +25,14 @@ Page({
     }
     this.data.moreUrl = dataUrl;
     util.http(dataUrl, this.callBack);
+    wx.showNavigationBarLoading();
   },
 
   // 上滑加载更多
   onScrollLower:function(event){
     var loadingMoreUrl=this.data.moreUrl + "?start=" + this.data.loadIndex + "&count=20";
     util.http(loadingMoreUrl, this.callBack);
+    wx.showNavigationBarLoading();
   },
 
   callBack: function (moviesData) {
@@ -68,6 +70,7 @@ Page({
     });
 
     this.data.loadIndex += 20;
+    wx.hideNavigationBarLoading();
   },
 
   onReady: function (event) {
