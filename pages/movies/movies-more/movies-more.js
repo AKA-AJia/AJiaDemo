@@ -2,11 +2,11 @@ var app = getApp();
 var util = require("../../../utils/util.js")
 Page({
   data: {
-    movies : {},
+    movies: {},
     navigationTitle: "",
-    moreUrl:"",
-    loadIndex:0,
-    isEmpty : true,
+    moreUrl: "",
+    loadIndex: 0,
+    isEmpty: true,
   },
   onLoad: function (options) {
     var category = options.category;
@@ -29,9 +29,20 @@ Page({
   },
 
   // 上滑加载更多
-  onScrollLower:function(event){
-    var loadingMoreUrl=this.data.moreUrl + "?start=" + this.data.loadIndex + "&count=20";
+  onScrollLower: function (event) {
+    var loadingMoreUrl = this.data.moreUrl + "?start=" + this.data.loadIndex + "&count=20";
     util.http(loadingMoreUrl, this.callBack);
+    wx.showNavigationBarLoading();
+  },
+
+  // 下拉加载更多
+  onPullDownRefresh: function (event) {
+    var refreshUrl = this.data.moreUrl +
+      "?start=0&count=20";
+    this.data.movies = {};
+    this.data.isEmpty = true;
+    this.data.loadIndex = 0;
+    util.http(refreshUrl, this.callBack);
     wx.showNavigationBarLoading();
   },
 
@@ -57,16 +68,16 @@ Page({
 
     //如果数据集不为空，追加新的数据
     var totalMovies = {};
-    if(!this.data.isEmpty){
-        totalMovies = this.data.movies.concat(movies);
+    if (!this.data.isEmpty) {
+      totalMovies = this.data.movies.concat(movies);
     }
-    else{
-        totalMovies = movies;
-        this.data.isEmpty = false;
+    else {
+      totalMovies = movies;
+      this.data.isEmpty = false;
     }
 
     this.setData({
-      movies : totalMovies
+      movies: totalMovies
     });
 
     this.data.loadIndex += 20;
