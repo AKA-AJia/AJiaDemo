@@ -27,11 +27,9 @@ Page({
         "Content-Type": "json"
       },
       success: function (res) {
-        // success
         that.processMoviesData(res.data, typeKey, categoryTitle);
       },
       fail: function () {
-        // fail
       }
     })
   },

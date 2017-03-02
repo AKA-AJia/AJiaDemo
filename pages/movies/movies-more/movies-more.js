@@ -4,6 +4,9 @@ Page({
   data: {
     movies : {},
     navigationTitle: "",
+    moreUrl:"",
+    loadIndex:0,
+    isEmpty : true,
   },
   onLoad: function (options) {
     var category = options.category;
@@ -20,8 +23,14 @@ Page({
         dataUrl = app.globalData.doubanBase + "/v2/movie/top250";
         break;
     }
-
+    this.data.moreUrl = dataUrl;
     util.http(dataUrl, this.callBack);
+  },
+
+  // 上滑加载更多
+  onScrollLower:function(event){
+    var loadingMoreUrl=this.data.moreUrl + "?start=" + this.data.loadIndex + "&count=20";
+    util.http(loadingMoreUrl, this.callBack);
   },
 
   callBack: function (moviesData) {
@@ -43,9 +52,22 @@ Page({
 
       movies.push(temp);
     }
+
+    //如果数据集不为空，追加新的数据
+    var totalMovies = {};
+    if(!this.data.isEmpty){
+        totalMovies = this.data.movies.concat(movies);
+    }
+    else{
+        totalMovies = movies;
+        this.data.isEmpty = false;
+    }
+
     this.setData({
-      movies : movies
+      movies : totalMovies
     });
+
+    this.data.loadIndex += 20;
   },
 
   onReady: function (event) {
