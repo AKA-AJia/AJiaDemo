@@ -1,12 +1,21 @@
 <import src="movieList-template/movieList-template.wxml" />
-<view class="container">
+<import src="movie-gridview/gridview-template.wxml" />
+<view class="search-container">
+  <icon class="search-icon" type="search" size="13" color="#405f80"></icon>
+  <input type="text" placeholder="寄生兽，灵能百分百" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindConfirm" />
+  <icon class="search-cancel" type="clear" size="13" bindtap="onCancelTap" wx:if="{{isSearchFocus}}"></icon>
+</view>
+<view class="container" wx:if="{{isMovieListFocus}}">
   <view class="movie-list-item">
-    <template is="movielistTemplate" data="{{...inTheaters}}"/>
+    <template is="movielistTemplate" data="{{...inTheaters}}" />
   </view>
   <view class="movie-list-item">
-    <template is="movielistTemplate" data="{{...comingSoon}}"/>
+    <template is="movielistTemplate" data="{{...comingSoon}}" />
   </view>
   <view class="movie-list-item">
-    <template is="movielistTemplate" data="{{...top250}}"/>
+    <template is="movielistTemplate" data="{{...top250}}" />
   </view>
+</view>
+<view class="search-panel"  wx:if="{{isSearchFocus}}">
+  <template is="movieGridView" data="{{...searchResult}}"/>
 </view>

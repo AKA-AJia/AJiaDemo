@@ -4,7 +4,10 @@ Page({
   data: {
     inTheaters: {},
     comingSoon: {},
-    top250: {}
+    top250: {},
+    searchResult: {},
+    isSearchFocus: false,
+    isMovieListFocus: true,
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -16,6 +19,7 @@ Page({
     this.getMovieData(inTheaters, "inTheaters", "正在热映");
     this.getMovieData(comingSoon, "comingSoon", "即将上映");
     this.getMovieData(top250, "top250", "豆瓣Top250");
+    wx.showNavigationBarLoading();
   },
 
   getMovieData(url, typeKey, categoryTitle) {
@@ -34,11 +38,11 @@ Page({
     })
   },
 
-  onMoreTap:function(event){
+  onMoreTap: function (event) {
     var category = event.currentTarget.dataset.category;
     wx.navigateTo({
-      url:"movies-more/movies-more?category=" + category
-    })   
+      url: "movies-more/movies-more?category=" + category
+    })
   },
 
   processMoviesData(moviesData, typeKey, categoryTitle) {
@@ -68,5 +72,27 @@ Page({
       movies: movies
     };
     this.setData(readyData);
+    wx.hideNavigationBarLoading();
+  },
+
+  onBindFocus: function (event) {
+    this.setData({
+      isSearchFocus: true,
+      isMovieListFocus: false
+    })
+  },
+
+  onBindConfirm: function (event) {
+    var text = event.detail.value;
+    var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;
+    this.getMovieData(searchUrl, "searchKey", "");
+    wx.showNavigationBarLoading();
+  },
+
+  onCancelTap: function (event) {
+    this.setData({
+      isSearchFocus: false,
+      isMovieListFocus: true
+    })
   }
 })
