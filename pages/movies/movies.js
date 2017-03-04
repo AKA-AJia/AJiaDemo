@@ -38,6 +38,7 @@ Page({
     })
   },
 
+  //点击更多
   onMoreTap: function (event) {
     var category = event.currentTarget.dataset.category;
     wx.navigateTo({
@@ -45,6 +46,15 @@ Page({
     })
   },
 
+  //点击电影item。跳转到电影详情
+  onDetailTap : function(event){
+    var movieId = event.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: "movie-detail/movie-detail?id=" +movieId
+    })
+  },
+
+  //处理返回数据
   processMoviesData(moviesData, typeKey, categoryTitle) {
     var movies = [];
     for (var idx in moviesData.subjects) {
@@ -75,6 +85,7 @@ Page({
     wx.hideNavigationBarLoading();
   },
 
+  //搜索框获取焦点
   onBindFocus: function (event) {
     this.setData({
       isSearchFocus: true,
@@ -82,13 +93,15 @@ Page({
     })
   },
 
+  //点击搜索完成按键
   onBindConfirm: function (event) {
     var text = event.detail.value;
     var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;
-    this.getMovieData(searchUrl, "searchKey", "");
+    this.getMovieData(searchUrl, "searchResult", "");
     wx.showNavigationBarLoading();
   },
 
+  //点击取消搜索
   onCancelTap: function (event) {
     this.setData({
       isSearchFocus: false,

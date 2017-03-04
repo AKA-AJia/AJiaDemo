@@ -16,6 +16,6 @@
     <template is="movielistTemplate" data="{{...top250}}" />
   </view>
 </view>
-<view class="search-panel"  wx:if="{{isSearchFocus}}">
-  <template is="movieGridView" data="{{...searchResult}}"/>
+<view class="search-panel" wx:if="{{isSearchFocus}}">
+  <template is="movieGridView" data="{{...searchResult}}" />
 </view>

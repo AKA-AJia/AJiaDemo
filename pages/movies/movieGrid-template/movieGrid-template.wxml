@@ -1,6 +1,6 @@
 <import src="../stars-template/stars-template.wxml" />
 <template name="movieGridTemplate">
-  <view class="grid-container">
+  <view catchtap="onDetailTap" class="grid-container" data-movieId="{{movieId}}">
     <image class="grid-image" src="{{coverageUrl}}"></image>
     <text class="grid-title">{{title}}</text>
     <template is="starsTemplate" data="{{stars:stars, score:average}}" />
