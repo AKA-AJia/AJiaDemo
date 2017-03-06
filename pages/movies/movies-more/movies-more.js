@@ -46,6 +46,14 @@ Page({
     wx.showNavigationBarLoading();
   },
 
+  //点击电影item。跳转到电影详情
+  onDetailTap: function (event) {
+    var movieId = event.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: "../movie-detail/movie-detail?id=" + movieId
+    })
+  },
+
   callBack: function (moviesData) {
     var movies = [];
     for (var idx in moviesData.subjects) {
